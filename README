@@ -1,0 +1,122 @@
+SAVR IDE V0.2.0
+==============
+Copyright (c) 2007 
+Adam Harris
+adam(dot)sheekgeek(at)gmail(dot)com
+This software is covered by the BSD... I guess.
+
+--------
+Purpose:
+--------
+
+This program is a simple IDE for AVR chips. It includes the ability to 
+use AVRA.exe to assemble and AVRdude.exe to program AVR chips.
+
+Basically this program was written to take the place of all the larger 
+AVR IDEs. It's as basic as it gets, no bloat. That means that it won't install
+and end up being 20MB or 80MB like other IDEs. I think with everything installed, 
+this program is like 2.5MB (including the assembler and the programmer).
+
+-------------
+Requirements:
+-------------
+Windows XP for now, this was written in FLTK so it should compile on any 
+system that supports FLTK. Mac, Linux, Unix, and Windows.
+
+Currently I will package AVRdude and AVRA with the program, unless I figure
+out in their licenses that I'm not supposed to.
+ 
+I may not package AVRA.exe or AVRdude with the program. If not, please
+place AVRA.exe into the "SAVR_IDE" directory so the path to AVRA.exe 
+is .../SAVR_IDE/avra.exe. Similarly, AVRdude.exe  and avrdude.conf should be in a the 
+SAVR_IDE directory under a directory named "bin" so the paths will be
+".../SAVR_IDE/bin/avrdude.exe" and ".../SAVE_IDE/bin/avrdude.conf".
+
+If compiling for linux, take out the .exe form the system calls.
+
+-------------
+Installation:
+-------------
+Obviously, you have installed it... otherwise you wouldn't be reading this.
+
+Well just in case, here it is:
+Unzip or unrar the folder into what ever directory you want.
+If you need to install AVRA and AVRdude, please read how to in the 
+"requirements" section above. AVRdude may also require you to 
+install giveio.dll. I will eventually put an option in SAVR to do this.
+
+------
+Usage:
+------
+When you open the program the window that opens will be the text editor window. I used the example FLTK
+editor.cxx program to do this. I modified it a bit to get the functionality I wanted
+but mainly its the same.  The "Options" menu is my attempt to write a simple 
+GUI for avrdude. I tried to use the avrdude-GUI with SAVR, but every thime I opened it, 
+the editor window froze, and it sucked all my CPU usage for a while on startup.
+
+Typing code:
+Type your AVR assembly code in the editor window. 
+
+Assembling Code:
+Go to "Project-->Assemble" or it F5 to assemble the code. 
+
+Programming a Chip:
+Go to "Project-->Options". This window autohides for some reason after making a selection,
+to prevent this, move the window to an open space on your desktop. Select which type of function you want to do, 
+the chip you are using, the programmer, and the port.  
+
+When all selections have been made, select "Project-->Program" or hit F9.
+
+--------
+History:
+--------
+This took me about a week or so of actual work. I wrote it at night after work.
+Probably could have done it in 2 or 3 days total,
+but I had to learn a bit before doing certain steps. I'm still a beginner.
+
+This program has only been tested with AtTiny2313 chip usinga DAPA and DT006 programmers.
+
+------
+To do:
+------
+
+-Fix inherited "Save" and "Save As" problems
+
+-Fix syntax highlighting and add options for it
+
+-Add options for AVRdude
+
+-Add popen capability for the editor window and get rid of the console window
+
+-clean up the code (its nasty and not commented very well, if at all)
+
+-use better methods for writing avrdude options
+
+-compile on other systems
+
+-Add GCC support
+
+
+-----------------
+About the Author:
+-----------------
+
+	I've written C++ code for a year or two. I'm not the best, I barely know what 
+I'm doing, haha. I took an intro to C++ class at college and hated every minute 
+of it. Since then I have written a couple of programs using BGI stuff. Now I 
+am getting into FLTK. I don't have a good understanding of writting GUIs 
+(I'm not to good with "classes") so I guess my work isn't all that clean, 
+but it works.  I'm open for suggestions, help and support in C++ if anyone's 
+willing to give it to me.
+
+	As far other stuff goes, I program ASM pretty good, I own SheekGeek 
+(http://www.sheekgeek.com) and ProjectBloc.com (http://www.projectbloc.com), 
+I play guitar, I build stuff, and I think that's it. 
+
+Anyway, I hope you like my program!!!
+--Adam
+
+
+
+
+
